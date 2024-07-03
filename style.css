@@ -1,0 +1,636 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #594545;
+  }
+  .main-section {
+    min-height: calc(100vh - 56px); /* Subtract the height of the navbar */
+    width: 100%;
+    background-color: #594545; /* Set background color to red */
+    padding: 20px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 56px; /* Add the height of the navbar */
+  }
+  .profile-img-container {
+    position: relative;
+    width: 400px; /* Set the width of the image container */
+    height: 400px; /* Set the height of the image container */
+    margin-bottom: 20px;
+    clip-path: path(
+      "M 200 0 C 275 0 350 20 350 100 C 350 200 450 300 350 350 C 275 380 125 380 50 350 C -25 300 50 200 50 100 C 50 20 125 0 200 0 Z"
+    ); /* Custom curvy shape */
+    overflow: hidden;
+    display: flex;
+    justify-content: flex-end; /* Align image to the right */
+    align-items: center;
+  }
+  .profile-img {
+    width: auto; /* Adjusted size to fit container */
+    height: 100%;
+    max-height: 100%; /* Ensure image doesn't overflow */
+    display: block;
+  }
+  .summary {
+    font-size: 1.2rem;
+  }
+  .education {
+    background-color: #fff8ea; /* Set background color to green */
+    color: white;
+    text-align: center; /* Center align text */
+    width: 100%;
+    padding: 10px;
+  }
+  .main-section .container {
+    margin: auto;
+    padding: 0;
+  }
+  .education h2 {
+    margin-bottom: 20px;
+    margin-top: 10px;
+  }
+  .education ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  .education ul li {
+    margin-bottom: 15px;
+  }
+  .left-aligned {
+    text-align: left;
+  }
+  .right-aligned {
+    text-align: right;
+  }
+  .education-detail {
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.2); /* Transparent background */
+  }
+  .work-experience {
+    background-color: #007bff; /* Blue background color */
+    padding: 40px 20px; /* Padding inside work experience section */
+    color: white;
+    text-align: center; /* Center align text */
+  }
+  .work-experience h2 {
+    margin-bottom: 20px;
+  }
+  .work-experience ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  .work-experience ul li {
+    margin-bottom: 15px;
+  }
+  .work-experience-detail {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.2); /* Transparent background */
+  }
+  .projects {
+    background-color: #ffc107; /* Yellow background color */
+    padding: 40px 20px; /* Padding inside projects section */
+    color: black; /* Text color */
+    text-align: center; /* Center align text */
+  }
+  .projects h2 {
+    margin-bottom: 20px;
+  }
+  .projects ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  .projects ul li {
+    margin-bottom: 15px;
+  }
+  .projects-detail {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.2); /* Transparent background */
+  }
+  .certification {
+    background-color: #28a745; /* Green background color */
+    padding: 40px 20px; /* Padding inside certification section */
+    color: white;
+    text-align: center; /* Center align text */
+  }
+  .certification h2 {
+    margin-bottom: 20px;
+  }
+  .certification ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  .certification ul li {
+    margin-bottom: 15px;
+  }
+  .certification-detail {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.2); /* Transparent background */
+  }
+  .achievements {
+    background-color: #dc3545; /* Red background color */
+    padding: 40px 20px; /* Padding inside achievements section */
+    color: white;
+    text-align: center; /* Center align text */
+  }
+  .achievements h2 {
+    margin-bottom: 20px;
+  }
+  .achievements ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  .achievements ul li {
+    margin-bottom: 15px;
+  }
+  .achievements-detail {
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.2); /* Transparent background */
+  }
+
+  @media (max-width: 991.98px) {
+    .profile-img-container {
+      justify-content: center; /* Center align image on smaller screens */
+      clip-path: path(
+"M 180 30 C 247.5 30 315 48 315 120 C 315 210 405 300 315 345 C 247.5 372 112.5 372 45 345 C -22.5 300 45 210 45 120 C 45 48 112.5 30 180 30 Z"
+); /* Enlarged curvy shape, moved down */
+
+    }
+    .education-detail,
+    .work-experience-detail,
+    .projects-detail,
+    .certification-detail,
+    .achievements-detail {
+      text-align: left; /* Left align content on smaller screens */
+    }
+    .certification-detail.left-aligned .certification-img {
+      float: right; /* Float image to right if detail is left-aligned */
+      margin-left: 15px;
+      margin-bottom: 15px; /* Adjust margin for spacing */
+    }
+    .certification-detail.right-aligned .certification-img {
+      float: left; /* Float image to left if detail is right-aligned */
+      margin-right: 15px;
+      margin-bottom: 15px; /* Adjust margin for spacing */
+    }
+  }
+
+  .nav-link {
+    color: white;
+    font-weight: 500;
+  }
+  .nav-link:hover {
+    color: #1a120b;
+  }
+  .nav-item {
+    margin: 0px 10px 0px 10px;
+  }
+  .navbar-brand {
+    margin: 0px 10px 0px 10px;
+    font-weight: bolder;
+    color: #221c1c;
+    font-size: 22px;
+  }
+  .navbar-brand:hover {
+    color: #1a120b;
+  }
+  .col-md-6 {
+    display: flex; /* Enable Flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+  }
+
+  
+  .profile-img {
+    max-width: 100%; /* Ensure the image scales within its container */
+    height: auto; /* Maintain the aspect ratio */
+  }
+  .row {
+    padding: 0;
+  }
+  .social-icons {
+    margin-top: 15px;
+  }
+
+  .social-icons a {
+    margin-right: 10px;
+    color: #fff8ea;
+    font-size: 24px;
+    transition: color 0.3s;
+  }
+
+  .social-icons a:hover .fa-linkedin {
+    color: #0077b5; /* LinkedIn color */
+  }
+
+  .social-icons a:hover .fa-instagram {
+    color: #e4405f; /* Instagram color */
+  }
+
+  .social-icons a:hover .fa-github {
+    color: #181717; /* GitHub color */
+  }
+
+  .social-icons a:hover .fa-file-download {
+    color: #00a651; /* Color for CV download icon, you can choose any color you prefer */
+  }
+
+  .navbar-toggler {
+    border: none;
+  }
+
+  /* General container styling */
+  .education .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+  }
+
+  /* Timeline styling */
+  .timeline {
+    display: flex;
+    flex-wrap: nowrap; /* Prevent wrapping */
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  /* Card styling */
+  .timeline-item {
+    background-color: #fff;
+    border-radius: 10px;
+    border: none;
+    padding: 20px;
+    flex: 1 1 30%; /* Ensure each card is about 30% of the container's width */
+    max-width: 30%;
+    box-sizing: border-box;
+    transition: transform 0.2s;
+  }
+
+  .timeline-item:hover {
+    transform: scale(1.05);
+  }
+
+  .timeline-content {
+    text-align: left;
+  }
+
+  /* Date and heading styling */
+  .timeline-item .date {
+    font-size: 0.9em;
+    color: #967e76;
+  }
+
+  .timeline-item h3 {
+    margin: 10px 0;
+    font-size: 1.4em;
+    color: #483434;
+  }
+  .timeline-item strong {
+    color: #2d2424;
+  }
+  .education h2 {
+    color: #221c1c;
+    font-weight: bold;
+    margin-bottom: 40px;
+  }
+  /* Responsive design */
+
+  /* For tablets and small screens */
+  @media (max-width: 1024px) {
+    .timeline {
+      flex-wrap: wrap; /* Allow wrapping for smaller screens */
+      justify-content: center; /* Center the items when wrapped */
+    }
+    .timeline-item {
+      max-width: 45%; /* Two cards per row for medium screens */
+      flex: 1 1 45%;
+    }
+  }
+
+  /* For mobile devices */
+  @media (max-width: 768px) {
+    .timeline-item {
+      max-width: 100%; /* Single card per row for small screens */
+      flex: 1 1 100%;
+    }
+  }
+
+  /* General Styles */
+  body {
+    font-family: "Arial", sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Work Experience Section */
+  .work-experience {
+    background-color: #967e76; /* Light peach background */
+    padding: 40px 20px;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+
+  .section-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    color: #221c1c;
+  }
+
+  .work-experience-detail {
+    text-align: center; /* Center text alignment */
+    margin-bottom: 20px; /* Space between entries */
+    background-color: transparent;
+  }
+
+  .position-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px; /* Space below title */
+    color: #483434;
+  }
+
+  .date-location {
+    font-size: 14px;
+    color: #483434; /* Lighter color for date/location */
+    margin-bottom: 10px; /* Space below date/location */
+  }
+
+  .description {
+    font-size: 16px;
+    line-height: 1.6; /* Increase line height for readability */
+    margin-bottom: 20px; /* Space below description */
+    color: #f9f5f6;
+  }
+
+  /* Divider */
+  .divider {
+    border: none;
+    border-top: 1px solid #ccc; /* Light gray line */
+    margin: 20px 0; /* Space around divider */
+  }
+
+  /* Styling for the overall container */
+  .work-experience .container {
+    max-width: 90%; /* Center container */
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+
+  /* General Styles */
+  body {
+    font-family: "Arial", sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Projects Section */
+  .projects {
+    background-color: #ffe0d1; /* Light peach background */
+    padding: 40px 20px;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  }
+
+  .section-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+
+  /* Project Detail Styling */
+  .project-detail {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+  }
+
+  .project-detail .text {
+    flex: 1;
+    text-align: left;
+  }
+
+  .project-title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px; /* Space below title */
+  }
+  .project-title {
+    color: #483434;
+  }
+
+  .name2 {
+    font-weight: 600;
+    font-size: 16px;
+  }
+  .projects .description {
+    font-size: 16px;
+    line-height: 1.6; /* Increase line height for readability */
+    color:#594545;
+  }
+
+  
+
+  /* Project Image Styling */
+  .project-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintain aspect ratio, cover the container */
+    display: block; /* Ensures the image behaves as a block element */
+  }
+
+  /* Links Styling */
+  .links {
+    margin-top: 10px; /* Space above the links */
+  }
+
+  .github-link,
+  .website-link {
+    color: white; /* Link color */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Make text bold */
+  }
+
+  .github-link:hover,
+  .website-link:hover {
+    text-decoration: none; /* Underline on hover */
+    color: #181717;
+    
+  }
+
+  /* Icon Styling */
+  .github-link i {
+    margin-right: 5px; /* Space between icon and text */
+    color: black;
+  }
+
+  .projects .divider {
+    color: #eee3cb;
+    border: 0.5px solid #967e76;
+    opacity: 1;
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .project-detail {
+      flex-direction: column; /* Stack text and image vertically */
+      align-items: center; /* Center items */
+    }
+
+    .image-container {
+      margin-left: 0; /* Remove left margin */
+      margin-top: 20px; /* Add top margin */
+      width: 200px; /* Slightly larger image for tablets */
+      height: 200px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .projects {
+      padding: 20px 10px; /* Reduce padding on mobile */
+    }
+
+    .image-container {
+      width: 150px; /* Reduce image size for mobile */
+      height: 150px;
+    }
+  }
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Achievements Section */
+.achievements {
+  background-color: #ffe0d1; /* Light peach background */
+  padding: 40px 20px;
+  text-align: center;
+  margin: 0 auto;
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+/* Achievement Detail Styling */
+.achievement-detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.achievement-detail .text {
+  flex: 1;
+  text-align: left;
+}
+
+.project-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px; /* Space below title */
+  color: #483434;
+}
+
+.name2 {
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.achievements .description {
+  font-size: 16px;
+  line-height: 1.6; /* Increase line height for readability */
+  color: #594545;
+}
+
+/* Image Container */
+.image-container {
+    flex: 0 0 auto; /* Remove fixed width and height */
+    max-width: 300px; /* Set maximum width */
+    max-height: 300px; /* Set maximum height */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-left: 20px;
+}
+
+/* Achievement Image Styling */
+.project-image {
+    width: 100%; /* Ensure the image fills its container */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: contain; /* Fit the image inside the container, maintaining aspect ratio */
+    display: block; /* Ensures the image behaves as a block element */
+}
+
+
+.achievements .divider {
+  color: #eee3cb;
+  border: 0.5px solid #967e76;
+  opacity: 1;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .achievement-detail {
+    flex-direction: column; /* Stack text and image vertically */
+    align-items: center; /* Center items */
+  }
+
+  .image-container {
+    margin-left: 0; /* Remove left margin */
+    margin-top: 20px; /* Add top margin */
+    width: 200px; /* Slightly larger image for tablets */
+    height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .achievements {
+    padding: 20px 10px; /* Reduce padding on mobile */
+  }
+
+  .image-container {
+    width: 150px; /* Reduce image size for mobile */
+    height: 150px;
+  }
+}
+
+
+.text p{
+    color: #594545;
+}
+
+.name2{
+    color: #815B5B;
+}
