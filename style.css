@@ -355,6 +355,7 @@
     text-align: center; /* Center text alignment */
     margin-bottom: 20px; /* Space between entries */
     background-color: transparent;
+    padding: 0;
   }
 
   .position-title {
@@ -633,4 +634,36 @@ body {
 
 .name2{
     color: #815B5B;
+}
+
+
+/* Image Container */
+.image-container {
+  flex: 0 0 auto; /* Allow the container to size based on content */
+  width: 100%; /* Ensure the container width is responsive */
+  max-width: 300px; /* Set a maximum width */
+  height: auto; /* Ensure height adjusts automatically */
+  max-height: 300px; /* Set a maximum height */
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-left: 20px;
+}
+
+/* Achievement Image Styling */
+.project-image {
+  width: 100%; /* Ensure the image fills its container */
+  height: 100%; /* Ensure the image height fills its container */
+  object-fit: cover; /* Ensure the image covers the container while maintaining aspect ratio */
+  display: block; /* Ensures the image behaves as a block element */
+}
+
+/* Ensure responsiveness for smaller screens */
+@media (max-width: 768px) {
+  .image-container {
+      margin-left: 0; /* Remove left margin for smaller screens */
+      margin-bottom: 20px; /* Add bottom margin for spacing */
+      width: 100%; /* Ensure the container takes the full width */
+      height: auto; /* Adjust height automatically */
+  }
 }
